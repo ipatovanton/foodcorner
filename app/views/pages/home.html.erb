@@ -1,0 +1,20 @@
+<div class="home-menu center">
+  <h1><%= link_to 'ФУДКОРНЕР', root_path %></h1>
+  <ul>
+    <li><%= link_to 'МЕНЮ', ("#{categories_path}#{"/ossetian-pies"}") %></li>
+    <li><%= link_to 'ДОСТАВКА', delivery_path %></li>
+    <li><%= link_to 'О НАС', about_path %></li>
+    <li><%= link_to 'КОНТАКТЫ', contacts_path %></li>
+  </ul>
+  <div class="social-links">
+    <%= link_to('https://instagram.com/foodcorner_moscow/', target: '_blank') do %>
+      <%= evil_icon 'ei-sc-instagram', size: :l %>
+    <% end  %>
+    <%= link_to('https://www.facebook.com/foodcornermoscow', target: '_blank') do %>
+      <%= evil_icon 'ei-sc-facebook', size: :l %>
+    <% end  %>
+    <%= link_to('https://vk.com/foodcorner', target: '_blank') do %>
+      <%= evil_icon 'ei-sc-vk', size: :l %>
+    <% end  %>
+  </div>
+</div>

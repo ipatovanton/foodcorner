@@ -1,0 +1,18 @@
+<% provide(:title, 'Контакты')%>
+<% provide(:description, 'Часы работы 10.00 - 23.00, г. Москва, ул. Первомайская д. 81, +7 (499) 391-51-52')%>
+<div class="info center">
+  <h4>Часы работы 10.00 - 23.00</h4>
+  <h4>г. Москва, ул. Первомайская д. 81</h4>
+  <h4>+7 (499) 391-51-52</h4>
+  <div class="social-links">
+    <%= link_to('https://instagram.com/foodcorner_moscow/', target: '_blank') do %>
+      <%= evil_icon 'ei-sc-instagram', size: :l %>
+    <% end  %>
+    <%= link_to('https://www.facebook.com/foodcornermoscow', target: '_blank') do %>
+      <%= evil_icon 'ei-sc-facebook', size: :l %>
+    <% end  %>
+    <%= link_to('https://vk.com/foodcorner', target: '_blank') do %>
+      <%= evil_icon 'ei-sc-vk', size: :l %>
+    <% end  %>
+  </div>
+</div>

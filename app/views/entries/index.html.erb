@@ -1,0 +1,10 @@
+<div class="content-show">
+  <h4>Меню</h4>
+  <ul class="content"> 
+    <% @entries.each do |entry| %>
+      <li>
+        <p><%= link_to entry.title, entry_path(entry) %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>

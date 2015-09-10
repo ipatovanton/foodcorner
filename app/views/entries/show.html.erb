@@ -1,0 +1,10 @@
+<% provide(:title, @entry.title)%>
+<% provide(:description, @entry.description) %>
+<div class="info center">
+  <h4><%= @entry.title %></h4>
+  <p><%= @entry.description %></p>
+  <% if @entry.image? %>
+    <p><%= cl_image_tag @entry.image.path, size: '300x300' %></p>
+  <% end %>
+  <button class="btn btn-buy"><%= @entry.price %> ₽</button>
+</div>

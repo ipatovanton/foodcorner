@@ -1,0 +1,24 @@
+<% provide(:title, 'Панель управления')%>
+<div class="info">
+<% if user_signed_in? %>
+  <p><b><%= current_user.email %></b>
+  <%= link_to 'Редактировать профиль', edit_user_registration_path, class: 'btn btn-d btn-small' %>
+  <%= link_to "Выход", destroy_user_session_path, method: :delete, class: 'btn btn-d btn-small' %>
+  </p>
+<% end %>
+
+<h4>Категории</h4>
+<% @categories.each do |category| %>
+  <p>
+    <%= link_to category.title, category_path(category) %>
+<% end %>
+<hr>
+<h4>Меню <%= link_to 'Добавить блюдо', new_entry_path, class: 'btn btn-s btn-small' %></h4>
+<% @entries.each do |entry| %>
+  <p>
+    <%= link_to entry.title, entry_path(entry) %>
+    <%= entry.price %> ₽
+    <%= link_to 'Редактировать', edit_entry_path(entry), class: 'btn btn-d btn-small' %>
+  </p>
+<% end %>
+</div>

@@ -1,0 +1,15 @@
+<% provide(:title, @category.title) %>
+<% provide(:description, @category.title) %>
+<%= render 'shared/nav_menu' %>
+<div class="entry-container">
+  <% @entries.each do |entry| %>
+    <div class="entry">
+      <% if entry.image? %>
+        <p><%= cl_image_tag entry.image.path, size: '300x300' %></p>
+      <% end %>
+      <h2 class="title"><%= entry.title %></h2>
+      <h4 class="description"><%= entry.description %></h4>
+      <div class="entry-price"><button class="btn btn-buy"><%= entry.price %> ₽</button></div>
+    </div>
+  <% end %>
+</div>

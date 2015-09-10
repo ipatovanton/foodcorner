@@ -1,0 +1,29 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, role: 'form' }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="form-group">
+    <%= f.email_field :email, placeholder: 'Еmail', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.password_field :password, autocomplete: "off", placeholder: 'Оставьте пустым, если не хотите менять', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Подтверждение пароля', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.password_field :current_password, autocomplete: "off", placeholder: 'Нам нужен ваш текущий пароль для подтверждения изменений', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Сохранить', data: { disable_with: 'Сохраняем...' }, class: 'btn btn-d' %>
+    <%= link_to 'Назад', :back, class: 'btn btn-d' %>
+  </div>
+<% end %>
+
+<h5>Удалить аккаунт</h5>
+<div class="form-group">
+  <%= button_to 'Удалить', registration_path(resource_name), data: { confirm: 'Вы уверенны, что хотите удалить аккаунт?' }, method: :delete, class: 'btn btn-w' %>
+</div>
