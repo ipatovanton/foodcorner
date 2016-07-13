@@ -11,4 +11,6 @@ class Entry
 
   belongs_to :user
   belongs_to :category, touch: true
+
+  default_scope -> { order('updated_at DESC') }
 end
