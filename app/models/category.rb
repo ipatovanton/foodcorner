@@ -7,6 +7,6 @@ class Category
   has_many :entries
   belongs_to :user
 
-  default_scope -> { order('created_at DESC') }
+  default_scope -> { order('updated_at DESC') }
 
 end
