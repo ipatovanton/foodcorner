@@ -9,7 +9,9 @@
       <% end %>
       <h2 class="title"><%= entry.title %></h2>
       <h4 class="description"><%= entry.description %></h4>
-      <div class="entry-price"><button class="btn btn-buy"><%= entry.price %> ₽</button></div>
+      <% if entry.price? %>
+        <div class="entry-price"><button class="btn btn-buy"><%= entry.price %> ₽</button></div>
+      <% end %>
     </div>
   <% end %>
 </div>
