@@ -6,6 +6,8 @@
     <div class="entry">
       <% if entry.image? %>
         <p><%= cl_image_tag entry.image.path, size: '300x300' %></p>
+      <% else %>
+        <p><img src="<%= entry.link %>" /></p>
       <% end %>
       <h2 class="title"><%= entry.title %></h2>
       <h4 class="description"><%= entry.description %></h4>

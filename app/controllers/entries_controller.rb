@@ -53,7 +53,7 @@ class EntriesController < ApplicationController
 
   private
     def entry_params
-      params.require(:entry).permit(:title, :description, :price, :category_id, :image)
+      params.require(:entry).permit(:title, :description, :price, :link, :category_id, :image)
     end
 
     def admin_user

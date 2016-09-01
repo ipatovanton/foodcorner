@@ -5,6 +5,7 @@ class Entry
   field :title, type: String
   field :description, type: String
   field :price, type: String
+  field :link, type: String
   field :created_at, type: Time
 
   has_attachment  :image

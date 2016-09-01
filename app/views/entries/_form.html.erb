@@ -15,6 +15,9 @@
     <%= f.collection_select :category_id, Category.all, :id, :title, { include_blank: true }, class: 'form-control' %>
   </div>
   <div class="form-group">
+    <%= f.text_field :link, class: 'form-control', placeholder: 'Link' %>
+  </div>
+  <div class="form-group">
     <%= f.submit 'Сохранить', data: { disable_with: 'Сохраняем...' }, class: 'btn btn-d' %>
   </div>
 <% end %>
