@@ -5,8 +5,9 @@
     <img src="http://res.cloudinary.com/dcfpmc4xp/image/upload/q_100/v1472774822/%D1%84%D1%83%D0%B4-%D0%B1%D0%B5%D0%BB_ydijd5.png" />
   <% end %>
   <ul>
+    <li class="red"><%= link_to 'ДОСТАВКА', "http://foodcorner.smartomato.ru", target: "_blank" %></li>
+    
     <li><%= link_to 'МЕНЮ', ("#{categories_path}#{"/burgers"}") %></li>
-    <li><%= link_to 'ДОСТАВКА', delivery_path %></li>
     <li><%= link_to 'О НАС', about_path %></li>
     <li><%= link_to 'КОНТАКТЫ', contacts_path %></li>
   </ul>
